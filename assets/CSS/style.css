@@ -1,0 +1,135 @@
+/** Méthode 1 pour ajouter un font*/
+
+/** font-family rajdhani*/
+
+/* @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+ font-family rajdhan
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap'); */
+
+@font-face {
+    font-family: 'Rajdhani';
+    src: url(../Police/Rajdhani-Medium.ttf);
+}
+@font-face {
+    font-family: 'SpaceGrotesk';
+    src: url(../Police/SpaceGrotesk-Medium.ttf);
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*******************************************GENERALE******************************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+:root{
+    --yellow-color: #ffff00;
+    --yellow-light: #f8f184;
+    --bleu-color: #19587d;
+    --rouge-color: #b11313;
+    --noir-color:#0d0e09;
+    --blanc-color:#fff;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing:border-box;
+}
+
+h1{
+    font-family: 'Rajdhani','Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: 400px;
+}
+
+button{
+    font-family: 'Rajdhani','Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+body{
+    background-color: black;
+    color: var(--blanc-color);
+    font-family: 'SpaceGrotesk';
+    font-weight: 300px;
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*******************************************NAVIGATION****************************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+nav{
+   /*  border: 2px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+ul{
+    list-style: none;
+}
+
+nav ul a{
+    color: var(--blanc-color);
+    /* text-decoration: none; */
+    font-size: 30px;
+    font-family: 'Rajdhani','Times New Roman', Times, serif;
+}
+nav ul a:hover{
+    color: var(--yellow-color);
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*******************************la première partie section hero*******************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+#hero{
+    background-image: url(../Illustrations/Bathome1.png);
+    height: 600px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-color: rgba(109, 8, 8, 0.849);
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*******************************la première partie section hero*******************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+.titreh1{
+    margin: 20px 0;
+}
+
+.biographie{
+    width: 80%;
+    text-align: justify;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+
+.batman-personnage{
+     border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.legende{
+    margin-top: 20px;
+    text-align: center;
+}
