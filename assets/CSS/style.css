@@ -11,10 +11,16 @@
 @font-face {
     font-family: 'Rajdhani';
     src: url(../Police/Rajdhani-Medium.ttf);
+
+}
+@font-face {
+    font-family: 'Rajdhani-light';
+    src: url(../Police/Rajdhani-Light.ttf);
+    
 }
 @font-face {
     font-family: 'SpaceGrotesk';
-    src: url(../Police/SpaceGrotesk-Medium.ttf);
+    src: url(../Police/SpaceGrotesk-Regular.ttf);
 }
 
 /*********************************************************************************************************/
@@ -30,8 +36,12 @@
     --rouge-color: #b11313;
     --noir-color:#0d0e09;
     --blanc-color:#fff;
+    --degrade-blanc:#eddebf63;
+    --degrade-rouge:#89000967;
+    --degrade-bleu:#19587d93;
+    --grey:#c4c4c4;
+    
 }
-
 *{
     padding: 0px;
     margin: 0px;
@@ -56,12 +66,84 @@ button{
 }
 
 body{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: var(--blanc-color);
     font-family: 'SpaceGrotesk';
     font-weight: 300px;
 }
 
+body{
+    background-image: url(../Illustrations/Bathome1.png);
+    margin: 0px;
+    height: 901px;
+    position: absolute;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+.a-bar{
+    border-top:3px solid #BCBBBD;
+    position: absolute;
+    top: 132px;
+    width:auto;
+    right: 102px;
+    left: 102px;
+    
+}
+.a-left{
+    border-left:3px solid #BCBBBD;
+    position:absolute;
+    height:4225px;
+    left: 102px;
+}
+.a-right{
+    border-right:3px solid #BCBBBD;
+    position:absolute;
+    height:4225px;
+    right: 102px;
+}
+.b-left{
+    border-left:3px solid #BCBBBD;
+    position:absolute;
+    top:4820px;
+    height:1296px;
+    left: 102px;
+}
+.b-right{
+    border-right:3px solid #BCBBBD;
+    position:absolute;
+    top:4820px;
+    height:1296px;
+    right: 102px;
+}
+.c-left{
+    border-left:3px solid #BCBBBD;
+    position:absolute;
+    top:6963px;
+    height:772px;
+    left: 102px;
+}
+.c-right{
+    border-right:3px solid #BCBBBD;
+    position:absolute;
+    top:6963px;
+    height:772px;
+    right: 102px;
+}
+
+.scroll{
+     /* border: 2px solid blue; */
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     position:fixed;
+     right: 50px;
+     top:210px;
+
+}
+
+.scroll .social{
+    margin-top: 15px;
+}
 /*********************************************************************************************************/
 /*********************************************************************************************************/
 /*******************************************NAVIGATION****************************************************/
@@ -88,6 +170,11 @@ nav ul a{
 }
 nav ul a:hover{
     color: var(--yellow-color);
+    font-weight: bold;
+}
+
+.logo-hover:hover, .social:hover{
+    filter: invert(4%) sepia(86%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
 }
 
 /*********************************************************************************************************/
@@ -95,22 +182,62 @@ nav ul a:hover{
 /*******************************la première partie section hero*******************************************/
 /*********************************************************************************************************/
 /*********************************************************************************************************/
+
+
+.scroll a{
+    text-decoration: none;
+}
+.content{
+    /* border: 2px solid blue; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 60%;
+    margin: 60px auto;
+    padding-top: 60px;
+    
+}
+
+.texte{
+    margin: 0 20px 0 20px;
+    font-size: 22px;
+}
 
 #hero{
-    background-image: url(../Illustrations/Bathome1.png);
-    height: 600px;
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-color: rgba(109, 8, 8, 0.849);
+    /* border: 2px solid blue; */
+    margin-bottom: 80px;
 }
 
+#hero .titreh2{
+    margin: 20px 0 50px 0;
+}
+
+.btn{
+    text-decoration: none;
+    color: var(--blanc-color);
+    font-size: 18px;
+    padding: 18px 40px;
+    margin: 15px;
+    background: linear-gradient(20deg, var(--degrade-blanc), var(--degrade-rouge));
+}
+
+#hero .fleche{
+    display: block;
+    margin: 0 auto;
+    margin-top: 530px
+}
+.btn:hover{
+    background: linear-gradient(20deg, white, red);
+}
 /*********************************************************************************************************/
 /*********************************************************************************************************/
-/*******************************la première partie section hero*******************************************/
+/***********************trois section: batman au cinema, némésis, alliés**********************************/
 /*********************************************************************************************************/
 /*********************************************************************************************************/
 .titreh1{
-    margin: 20px 0;
+    font-weight: bold;
+    margin: 30px 0;
 }
 
 .biographie{
@@ -123,13 +250,266 @@ nav ul a:hover{
 }
 
 .batman-personnage{
-     border: 2px solid blue;
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: space-between;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
 }
 
 .legende{
     margin-top: 20px;
     text-align: center;
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*************************************Section Justice League**********************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+.justice-league{
+    margin-top: 80px;
+    width: 100%;
+}
+
+.justice h1{
+    margin-left: 100px;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.justice p{
+    margin: 0 100px;
+    font-size: 20px;
+    text-align: justify;
+
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*******************************************Multimedia****************************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+.slider-mutimedia{
+    /* border: 2px solid blue; */
+    display: flex;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.slider-image {
+    width: 100%;
+    height: 230px;
+    
+}
+
+.slider-content{
+    border-radius: 0px 15px 15px 0px;
+    height: 230px;
+    font-size: 12px;
+    padding: 15px;
+    background: linear-gradient(50deg, var(--degrade-blanc), var(--degrade-bleu));
+}
+.slider-content h2, .slider-content h3{
+    font-family: 'Rajdhani-light';
+    margin-bottom: 8px;
+    
+}
+
+.slider-content p{
+    margin-bottom: 8px;
+}
+
+
+.slider-content span{
+    color: var(--yellow-color);
+}
+
+.image-bande-annonce img {
+    width: 100%;
+    
+}
+.image-bande-annonce {
+    margin: 150px 0;
+}
+
+#multimedia button{
+    position: relative;
+    top: 240px;
+    background: none;
+    border: none;
+}
+
+#multimedia button.right-fleche{
+    right: -80%;
+}
+#multimedia button.left-fleche{
+    right: -10%;
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/*************************************Formulaire de contact***********************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+#contact{
+    background: linear-gradient(80deg, var(--degrade-blanc), var(--degrade-bleu));
+    padding: 50px 0;
+}
+
+#contact .form{
+    /* border: 3px solid blue; */
+    width: 50%;
+    margin: 0 auto;
+    color: var(--grey);
+}
+
+#contact h2{
+    text-align:center;
+    margin-bottom: 80px;
+    font-size: 32px;
+    color: var(--blanc-color);
+}
+
+#contact .label-titre{
+    display: block;
+    margin: 20px 0;
+    font-size: 20px;
+    color: var(--blanc-color);
+}
+
+#contact .form input[type='email'], textarea{
+    background: none;
+    border-color: var(--grey);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    width: 100%;
+    padding: 5px 0;
+    font-size: 15px;
+    color: var(--blanc-color);
+}
+
+
+#contact .form .icon img {
+    transform: rotate(90deg);
+    width: 18px;
+}
+
+#contact .form .news, .liste{
+    margin: 20px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid var(--grey);
+    
+}
+
+::placeholder{
+    color: var(--grey);
+    font-family: 'SpaceGrotesk';
+}
+#contact span, .news, .letter{
+    font-size:15px;
+}
+.liste{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-around;
+}
+.form input[type='radio']{
+    opacity: 0;
+}
+.btn-group label{
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0;
+    color: var(--blanc-color);
+    cursor: pointer;
+    border: 2px solid;
+    border-image: linear-gradient(69deg, var(--degrade-bleu), var(--degrade-blanc))1;
+    width: 110px;
+}
+
+input[type='submit']{
+    display: block;
+    width: 230px;
+    margin: 25px auto;
+    padding: 20px;
+    background: none;
+    color: var(--blanc-color);
+    font-size: 20px;
+    font-family: 'Rajdhani';
+    background: linear-gradient(60deg, var(--degrade-blanc), var(--degrade-rouge));
+    border: none;
+}
+input[type='submit']:hover{
+    background: linear-gradient(20deg, white, red);
+}
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/********************************************Citation*****************************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+#citations{
+    margin: 110px 90px;
+}
+#citations .citation-card{
+    text-align: center;
+    width: 48%;
+    margin: 0 auto;
+}
+#citations .citation-auteur{
+   font-size: 13px;
+   color:var(--bleu-color);
+   padding-top: 30px;
+   font-family: 'SpaceGrotesk';
+}
+
+.guillemet-close img{
+    position: relative;
+    right: -90%;
+}
+
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+/********************************************Footer*******************************************************/
+/*********************************************************************************************************/
+/*********************************************************************************************************/
+
+footer{
+    margin-top: 150px;
+    height: 250px;
+}
+footer span{
+    font-size: 11px;
+}
+
+footer .text-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+footer .social-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+    margin-bottom: 100px;
+}
+footer .social-items{
+    padding-left: 40px;
+}
+footer a {
+    text-decoration: none;
+}
+.social-items:hover{
+    filter: invert(4%) sepia(86%) saturate(1680%) hue-rotate(352deg) brightness(109%) contrast(104%);
 }
